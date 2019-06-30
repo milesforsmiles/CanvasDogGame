@@ -1,0 +1,35 @@
+#MoveDown {
+  position: fixed;
+  top: 370px;
+  right: 400px;
+  width: 100px;
+  height: 50px;
+  border: 3px solid #FFE933;
+}
+
+#MoveUp {
+  position: fixed;
+  top: 280px;
+  right: 400px;
+  width: 100px;
+  height: 50px;
+  border: 3px solid #FF33AB;
+}
+
+#MoveRight {
+  position: fixed;
+  top: 325px;
+  right: 350px;
+  width: 100px;
+  height: 50px;
+  border: 3px solid #6F33FF;
+}
+
+#MoveLeft {
+  position: fixed;
+  top: 325px;
+  right: 450px;
+  width: 100px;
+  height: 50px;
+  border: 3px solid #33FFBD;
+}
