@@ -5,3 +5,4 @@ TODO:
 Add an owner graphic that moves with the dog. 
 Make the canvas objects move automatically in the direction pressed until reaching the end of the screen.
 Add a way to keep track of scores.
+Follow DRY principle better. 
