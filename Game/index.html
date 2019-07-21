@@ -1,49 +1,40 @@
-<!DOCTYPE hmtl>
+﻿<!DOCTYPE html>
 <html>
-  <head>
+
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
     <meta charset="utf-8">
     <title>Dog Race</title>
-
-    <link rel="stylesheet" href="style.css">
-  </head>
+</head>
   <body>
 
-<canvas id = "myCanvas" width = "1000px" height = "300px">  </canvas>
+      <canvas id="myCanvas" width="1000" height="600">  </canvas>
 
-<button onclick="drawDog(50,50)"> DRAWWW THE DOGODOGODODO GODDOG GOF </button>
+      <button onclick="drawDog(50, 50)"> START</button>
 
-<p>Please enter the name of the Owner:
-   <input type="text" id="ownerName"></input>
-</p>
+      <p>
+          Please enter the name of the Owner:
+          <input type="text" id="ownerName">
+      </p>
 
-<p>Please enter the name of your dog:
-   <input type="text" id="dogName"></input>
-</p>
-<br>
-<input type="radio" name="location" value="dogAlone">Dog Walks Alone</input><br>
-<input type="radio" name="location" value="ownerAlone">Owner walks Alone</input><br>
-<input type="radio" name="location" value="together"> Both walk together</input><br>
+      <p>
+          Please enter the name of your dog:
+          <input type="text" placeholder="Enter Dog name" id="dogName">
+      </p>
+      <div id="buttonDiv">
+          <button id="moveDown">DOWN</button>
+          <br>
+          <button id="moveUp">Up</button>
+          <br>
+          <button id="moveRight">Right</button>
+          <br>
+          <button id="moveLeft">Left</button>
+          <br>
+          <button id="BARKBARK" onclick="BarkBark">BARK? </button>
+      </div>
 
-<input type = "range" id = "rating"  onchange= "updateSliderVal" min = "1" max = "100" value = "50"> </input>
-<br>
-<button id="ShowSummary" onclick="showSummary()">Submit</button>
-
-<br>
-<br>
-<br>
-<br>
-
-<button id="MoveDown" onclick="moveDown()">DOWN</button>
-<br>
-<button id="MoveUp" onclick="moveUp()">Up</button>
-<br>
-<button id="MoveRight" onclick="moveRight()">Right</button>
-<br>
-<button id="MoveLeft" onclick="moveLeft()">Left</button>
-<br>
-<button id= "BARKBARK" onClick ="BarkBark()">BARK? </button>
-
-
-<script src="newscript.js"></script>
-</body>
+      <script src="newscript.js"></script>
+  </body>
+  
 </html>

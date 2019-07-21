@@ -7,73 +7,75 @@ var yPos = 0;
 var dogImg = new Image();
 dogImg.src = "dog.png";
 
-for(var i = 0; i <= 10; i++){
 
+document.getElementById("buttonDiv").addEventListener("click", function (event) {
+    event.preventDefault();
+    direction = event.target.id;
+    //This gets the direction
+    console.log(direction);
 
+    requestID = requestAnimationFrame(animate);
+
+   }
+)
+
+function animate() {
+    requestID = requestAnimationFrame(animate);
+
+    if (xPos <= (canvas.width -50) && yPos <= (canvas.height -50)) {
+        eraseDog(xPos, yPos);
+        moveDirection();
+        drawDog(xPos, yPos);
+        
+    } else {
+        cancelAnimationFrame(requestID);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        
+    }
 }
 
-function drawDog(xPos, yPos)
-{
+
+function moveDirection() {
+    if (direction == "moveUp") {
+        moveUp();
+    }
+    else if (direction == "moveDown") {
+        moveDown();
+    }
+    else if (direction == "moveLeft") {
+        moveLeft();
+    }
+    else {
+        moveRight();
+    }
+}
+
+function drawDog(xPos, yPos){
 ctx.drawImage(dogImg, xPos, yPos, 80, 80);
 }
 
 
-function eraseDog(xPos,yPos){
-
-  ctx.clearRect(xPos,yPos, 80,80);
+function eraseDog(xPos, yPos){
+ctx.clearRect(xPos, yPos, 80, 80);
 }
-
-function showSummary()
-{
-  var dogAlone = document.getElementsByName("location")[0].checked;
-  var ownerAlone = document.getElementsByName("location")[1].checked;
-  var together = document.getElementsByName("location")[2].checked;
-
-  if(dogAlone)
-  {
-    console.log("Dog Alone");
-  }
-  else if (ownerAlone)
-  {
-    console.log("One Human");
-  }
-  else
-  {
-    console.log("Walking together");
-  }
-  console.log("slider val: " + document.querySelector("#rating").value);
-}
-
-function updateSliderVal(){
-  document.querySelector("#sliderVal").innerHTML = document.querySelector("#rating").value;
-}
-
 
 function moveDown(){
-eraseDog(xPos, yPos);
 yPos = yPos + 1;
-drawDog(xPos, yPos);
 }
 
 
 function moveUp(){
-eraseDog(xPos,yPos);
 yPos = yPos - 1;
-drawDog(xPos, yPos);
 }
 
 
 function moveRight(){
-
-eraseDog(xPos, yPos);
 xPos = xPos + 1;
-drawDog(xPos, yPos);
 }
 
 function moveLeft(){
-eraseDog(xPos, yPos);
   xPos = xPos - 1;
-  drawDog(xPos, yPos);
 }
 
 function BarkBark(){
